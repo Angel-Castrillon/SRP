@@ -1,12 +1,13 @@
 <?php
 namespace App\Services;
 
+use App\Repositories\MemberRepository;
 use Illuminate\Support\Facades\Hash;
 
 class MemberService{
 
     public function __construct(
-        private $memberRepository
+        private MemberRepository $memberRepository
     ) {}
     
     public function getAll(){
